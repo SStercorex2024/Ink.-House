@@ -1,0 +1,21 @@
+@use 'functions' as *;
+
+@mixin fluid-text($max, $min) {
+  font-size: fluid($max, $min);
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@mixin focus-visible {
+  outline: 2px dashed var(--color-yellow-04);
+  outline-offset: 4px;
+  transition-duration: 0s !important;
+}

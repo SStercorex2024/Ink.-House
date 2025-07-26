@@ -1,0 +1,91 @@
+.header {
+
+  background-color: var(--color-green-05);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet-l-above {
+      padding-inline: var(--section-padding-x);
+    }
+
+    @include tablet-l {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+
+    @include tablet-l {
+      border-bottom: var(--border-gray-m);
+      padding-block: fluid(36, 14);
+      justify-content: center;
+      width: 100%;
+    }
+
+    @include mobile {
+      background-color: var(--color-light-01);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    column-gap: 60px;
+    padding-block: fluid(36, 14);
+
+    @include tablet-l {
+      column-gap: 20px;
+      justify-content: space-between;
+      align-self: stretch;
+      padding-inline: var(--section-padding-x);
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    column-gap: 60px;
+
+    @include tablet-l {
+      display: none;
+    }
+  }
+
+  &__menu-link {
+    @include fluid-text(20, 18);
+    font-weight: 500;
+  }
+
+  &__button {
+    @include tablet-l {
+      order: 1;
+    }
+  }
+
+  &__burger-button.burger-button {
+    display: none;
+
+
+    @include tablet-l {
+      display: block;
+    }
+  }
+
+  &__overlay-menu-dialog[open] {
+    position: sticky;
+    border: none;
+    background-color: var(--color-green-05);
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 90vh;
+    overflow-y: auto;
+  }
+
+  &__overlay-menu-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+}
