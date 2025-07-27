@@ -23,13 +23,14 @@
   }
 
   &--tabs {
-    padding: 10px 20px;
+    padding: 8px 18px;
     background-color: var(--color-green-04);
     border-radius: var(--border-radius-l);
-    border: transparent;
+    border-color: transparent;
+    transition-duration: 0s;
 
     @include hover {
-      border: var(--border-green-l);
+      outline: 2px solid var(--color-green-03);
     }
 
     &--active {
@@ -38,6 +39,10 @@
 
       &:disabled {
         background-color: var(--color-green-02);
+      }
+
+      @include hover {
+        outline: none;
       }
     }
   }

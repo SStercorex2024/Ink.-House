@@ -23,8 +23,17 @@ class OverlayMenu {
     document.documentElement.classList.toggle(this.stateClasses.isLock)
   }
 
+  onChangeWindow = () => {
+    if (window.innerWidth >= 690) {
+      this.burgerButtonElement.classList.remove(this.stateClasses.isActive)
+      this.dialogElement.open = false
+      document.documentElement.classList.remove(this.stateClasses.isLock)
+    }
+  }
+
   bindElement = () => {
     this.burgerButtonElement.addEventListener('click', this.onBurgerClickButton)
+    window.addEventListener('resize', this.onChangeWindow)
   }
 }
 

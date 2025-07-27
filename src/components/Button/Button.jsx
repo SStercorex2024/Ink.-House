@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 const Button = (props) => {
   const {
+    extraAttr,
     className,
     type = 'button',
     href,
@@ -37,10 +38,13 @@ const Button = (props) => {
       className={classNames(className, {
         [`button--${mode}`]: mode,
         'button': true,
+        [`button--tabs--active`]: isActive,
+        [`button-active`]: isActive && className !== 'tabs-navigation__button',
       })}
       title={title}
       aria-label={title}
       {...specificProps}
+      {...extraAttr}
     >
       {isLabelHidden && IconComponent}
       {!isLabelHidden && (

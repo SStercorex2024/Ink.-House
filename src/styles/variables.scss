@@ -34,7 +34,7 @@
   )};
 
   --section-padding-x: 16px;
-  --section-padding-y: fluid(35, 25);
+  --section-padding-y: #{fluid(35, 25)};
 
   --transition-duration-longer: 0.4s;
   --transition-duration: 0.2s;

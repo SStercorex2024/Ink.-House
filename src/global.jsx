@@ -1,6 +1,7 @@
 import '@/styles'
 import {Head} from "minista";
 import Header from "@/layouts/Header";
+import Content from "@/layouts/Content";
 
 export default function (props) {
   const {
@@ -35,7 +36,9 @@ export default function (props) {
         <link rel="manifest" href="/site.webmanifest"/>
       </Head>
       <Header/>
-      {children}
+      <Content>
+        {children}
+      </Content>
     </>
   )
 }

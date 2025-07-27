@@ -1,14 +1,15 @@
 .hero {
+  --section-hero-padding-y: #{var(--section-padding-y)};
+
   &__content-wrapper {
     display: flex;
     align-items: center;
     column-gap: 30px;
-    padding-bottom: var(--section-padding-y);
     @include tablet-m-above {
-      padding-bottom: var(--section-padding-y);
+      padding-bottom: var(--section-hero-padding-y);
     }
-    @include tablet-m {
-      padding-block: var(--section-padding-y);
+    @include tablet-l {
+      padding-block: var(--section-hero-padding-y);
     }
   }
 
@@ -32,7 +33,7 @@
 
     @include mobile {
       row-gap: 20px;
-      height: 290px;
+      height: auto;
     }
   }
 
@@ -60,6 +61,7 @@
 
     @include mobile {
       padding-inline: 29px;
+      margin-top: 20px;
     }
   }
 }
