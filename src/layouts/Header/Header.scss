@@ -45,7 +45,7 @@
 
   &__menu-list {
     display: flex;
-    column-gap: 60px;
+    column-gap: fluid-to-tablet(60, 50);
 
     @include tablet-l {
       display: none;

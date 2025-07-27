@@ -4,13 +4,14 @@ import classNames from "classnames";
 
 const Button = (props) => {
   const {
+    extraAttr,
     className,
     type = 'button',
     href,
     /**
-     * '' (default) | transparent | tabs | yellow
+     * transparent (default) | green  | tabs | yellow
      */
-    mode = '',
+    mode = 'transparent',
     isActive = false,
     iconName,
     hasFillIcon,
@@ -35,11 +36,14 @@ const Button = (props) => {
   return (
     <Component
       className={classNames(className, {
+        'button': true,
         [`button--${mode}`]: mode,
+        'is-active': isActive,
       })}
       title={title}
       aria-label={title}
       {...specificProps}
+      {...extraAttr}
     >
       {isLabelHidden && IconComponent}
       {!isLabelHidden && (

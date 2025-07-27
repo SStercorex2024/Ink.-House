@@ -1,0 +1,59 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition-duration: var(--transition-duration);
+
+  @include fluid-text(20, 18);
+
+  &__transparent {
+    background-color: transparent;
+  }
+
+  &--green {
+    padding-block: fluid(21, 14);
+    border: var(--border-green-m);
+    color: var(--color-green-02);
+    background-color: inherit;
+
+    @include hover {
+      background-color: var(--color-green-04);
+    }
+  }
+
+  &--tabs {
+    padding: 8px 18px;
+    background-color: var(--color-green-04);
+    border-radius: var(--border-radius-l);
+    border-color: transparent;
+    transition-duration: 0s;
+
+    @include hover {
+      outline: 2px solid var(--color-green-03);
+    }
+
+    &.is-active {
+      color: var(--color-light-01);
+      background-color: var(--color-green-03);
+
+      &:disabled {
+        background-color: var(--color-green-02);
+      }
+
+      @include hover {
+        outline: none;
+      }
+    }
+  }
+
+  &--yellow {
+    padding-block: fluid(21, 14);
+    background-color: var(--color-yellow-02);
+    border: 1px solid transparent;
+
+    @include hover {
+      border: var(--border-yellow-m);
+    }
+  }
+}

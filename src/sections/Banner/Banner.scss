@@ -1,0 +1,70 @@
+.banner {
+  margin-block: var(--section-padding-y);
+  background-image: url("../../assets/images/banner/1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: fluid-to-tablet(60, 20);
+    padding-block: fluid-to-tablet(70, 50);
+    max-width: 540px;
+    z-index: var(--z-index-content-banner);
+
+    @include mobile {
+      row-gap: 30px;
+    }
+  }
+
+  &__layout {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(13, 43, 67, 0.8);
+      mix-blend-mode: multiply;
+      filter: blur(157.5px);
+      z-index: 0;
+      width: 65%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(20, 10);
+  }
+
+  &__title {
+    color: var(--color-green-06);
+
+    @include fluid-text(40, 24);
+  }
+
+  &__star {
+    svg {
+      color: var(--color-yellow-01);
+      @include square(fluid(80, 50))
+    }
+  }
+
+  &__description {
+    color: var(--color-green-06);
+    line-height: 150%;
+  }
+
+  &__button {
+    padding-inline: fluid-to-tablet(60, 34);
+
+    @include tablet-m {
+      width: 100%;
+    }
+  }
+}
+
