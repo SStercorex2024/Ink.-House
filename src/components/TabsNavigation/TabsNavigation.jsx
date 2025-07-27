@@ -5,7 +5,6 @@ const TabsNavigation = (props) => {
   const {
     tabName,
     isActive,
-    id
   } = props
 
   return (
@@ -14,7 +13,7 @@ const TabsNavigation = (props) => {
       label={tabName}
       isActive={isActive}
       mode="tabs"
-      id={id}
+      extraAttr={{'data-js-tabs-button': ''}}
     />
   )
 }

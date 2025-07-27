@@ -2,7 +2,7 @@
   --font-size-m: #{fluid(20, 16)};
 
   &__list {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     justify-items: center;
@@ -13,6 +13,10 @@
 
     @include tablet-m {
       grid-template-columns: 1fr;
+    }
+
+    &.is-active {
+      display: grid;
     }
   }
 

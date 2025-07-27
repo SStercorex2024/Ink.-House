@@ -11,15 +11,19 @@ const TabsCards = (props) => {
 
   return (
     <div className={classNames(className, 'cards')}>
-      {cardsItems.map(({tabName, isActive, cardItems}, index) => (
+      {cardsItems.map(({isActive, cardItems}, index) => (
         <ul
           className={classNames("cards__list", {
-            [`cards__list--${tabName.toLocaleLowerCase()}`]: tabName
+            "is-active": isActive
           })}
-          {...{[`data-js-tabs-cards-list-${index}`]: ""}}
+          data-js-tabs-cards-list=""
+          key={index}
         >
           {cardItems.map(({author, name, size, price, url}, index) => (
-            <li className="cards__item">
+            <li
+              className="cards__item"
+              key={index}
+            >
               <Image
                 className="cards__image"
                 src={url}
@@ -38,7 +42,6 @@ const TabsCards = (props) => {
                 className="cards__button"
                 mode="green"
                 label="Buy"
-                {...{[`data-js-tabs-button-${index}`]: ""}}
               />
             </li>
           ))}

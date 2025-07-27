@@ -36,10 +36,9 @@ const Button = (props) => {
   return (
     <Component
       className={classNames(className, {
-        [`button--${mode}`]: mode,
         'button': true,
-        [`button--tabs--active`]: isActive,
-        [`button-active`]: isActive && className !== 'tabs-navigation__button',
+        [`button--${mode}`]: mode,
+        'is-active': isActive,
       })}
       title={title}
       aria-label={title}
