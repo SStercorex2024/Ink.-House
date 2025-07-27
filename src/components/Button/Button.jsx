@@ -8,9 +8,9 @@ const Button = (props) => {
     type = 'button',
     href,
     /**
-     * '' (default) | transparent | tabs | yellow
+     * transparent (default) | green  | tabs | yellow
      */
-    mode = '',
+    mode = 'transparent',
     isActive = false,
     iconName,
     hasFillIcon,
@@ -36,6 +36,7 @@ const Button = (props) => {
     <Component
       className={classNames(className, {
         [`button--${mode}`]: mode,
+        'button': true,
       })}
       title={title}
       aria-label={title}
