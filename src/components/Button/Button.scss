@@ -50,7 +50,7 @@
   &--yellow {
     padding-block: fluid(21, 14);
     background-color: var(--color-yellow-02);
-    border: transparent;
+    border: 1px solid transparent;
 
     @include hover {
       border: var(--border-yellow-m);
