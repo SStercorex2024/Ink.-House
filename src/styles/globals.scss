@@ -41,3 +41,8 @@ a {
 :focus-visible {
   @include focus-visible;
 }
+
+.h2 {
+  font-weight: 500;
+  @include fluid-text(40, 24)
+}

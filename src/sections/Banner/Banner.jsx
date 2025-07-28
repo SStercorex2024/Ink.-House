@@ -29,7 +29,7 @@ const Banner = (props) => {
             />
             <h1
               id="banner-title"
-              className="banner__title"
+              className="banner__title h2"
             >{bannerItems.title}</h1>
           </div>
           <div className="banner__description">
