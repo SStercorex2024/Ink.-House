@@ -113,6 +113,10 @@
     column-gap: 30px;
   }
 
+  &__socials-item {
+    display: flex;
+  }
+
   &__socials-extra {
     display: flex;
     flex-direction: column;
@@ -136,5 +140,9 @@
     color: var(--color-gray-01);
 
     font-size: 12px;
+  }
+
+  &__socials-button {
+    @include square(24);
   }
 }

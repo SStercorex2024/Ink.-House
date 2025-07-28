@@ -5,7 +5,7 @@ const AboutUs = () => {
 
   const title = 'Our Team'
   const description = 'The significance of these problems is so obvious that the basic vector of development allows us to assess the significance of experiments that are striking in their scale and grandiosity. We have to start from the fact that consultation with a broad asset.'
-  const imgUrl = '/src/assets/images/about-us/1.png'
+  const imgUrl = '/src/assets/images/about-us/about.jpg'
 
   return (
     <section
@@ -32,15 +32,21 @@ const AboutUs = () => {
             <div className="about-us__people">
               <Image
                 className="about-us__icon"
-                src="/people/2.svg"
+                src="/src/assets/images/people/one.png"
+                width={80}
+                height={80}
               />
               <Image
                 className="about-us__icon"
-                src="/people/3.svg"
+                src="/src/assets/images/people/two.png"
+                width={80}
+                height={80}
               />
               <Image
                 className="about-us__icon"
-                src="/people/1.svg"
+                src="/src/assets/images/people/three.png"
+                width={80}
+                height={80}
               />
             </div>
           </div>
