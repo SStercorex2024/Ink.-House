@@ -1,9 +1,21 @@
 .banner {
   margin-block: var(--section-padding-y);
-  background-image: url("../../assets/images/banner/1.png");
+  background-image: url("../../assets/images/banner/4.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
+  @include tablet-m-above {
+    background-image: url("../../assets/images/banner/3.png");
+  }
+
+  @include tablet-l-above {
+    background-image: url("../../assets/images/banner/2.png");
+  }
+
+  @include laptop-above {
+    background-image: url("../../assets/images/banner/1.png");
+  }
 
   &__content {
     position: relative;
@@ -17,21 +29,6 @@
 
     @include mobile {
       row-gap: 30px;
-    }
-  }
-
-  &__layout {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(13, 43, 67, 0.8);
-      mix-blend-mode: multiply;
-      filter: blur(157.5px);
-      z-index: 0;
-      width: 65%;
     }
   }
 

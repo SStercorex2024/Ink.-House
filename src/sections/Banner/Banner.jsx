@@ -20,32 +20,29 @@ const Banner = (props) => {
       className={classNames(className, 'banner')}
       aria-labelledby="banner-title"
     >
-      <div className="banner__layout">
-        <div className="container">
-          <div className="banner__content">
-            <div className="banner__header">
-              <Icon
-                className="banner__star"
-                name="star"
-              />
-              <h1
-                id="banner-title"
-                className="banner__title"
-              >{bannerItems.title}</h1>
-            </div>
-
-            <div className="banner__description">
-              <p>{bannerItems.description1}</p>
-            </div>
-            <div className="banner__description">
-              <p>{bannerItems.description2}</p>
-            </div>
-            <Button
-              className="banner__button"
-              mode="yellow"
-              label={bannerItems.labelButton}
+      <div className="container">
+        <div className="banner__content">
+          <div className="banner__header">
+            <Icon
+              className="banner__star"
+              name="star"
             />
+            <h1
+              id="banner-title"
+              className="banner__title"
+            >{bannerItems.title}</h1>
           </div>
+          <div className="banner__description">
+            <p>{bannerItems.description1}</p>
+          </div>
+          <div className="banner__description">
+            <p>{bannerItems.description2}</p>
+          </div>
+          <Button
+            className="banner__button"
+            mode="yellow"
+            label={bannerItems.labelButton}
+          />
         </div>
       </div>
     </section>
