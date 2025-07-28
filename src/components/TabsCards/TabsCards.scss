@@ -77,11 +77,16 @@
 
   &__price {
     color: var(--color-green-02);
+    margin-top: auto;
 
     @include fluid-text(24, 20)
   }
 
-  &__button {
+  &__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(20, 10);
     width: 100%;
+    margin-top: auto;
   }
 }

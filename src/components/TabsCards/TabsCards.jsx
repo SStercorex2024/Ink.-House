@@ -36,13 +36,15 @@ const TabsCards = (props) => {
                 <div className="cards__size">
                   <p>{size}</p>
                 </div>
-                <span className="cards__price">{price}</span>
               </div>
-              <Button
-                className="cards__button"
-                mode="green"
-                label="Buy"
-              />
+              <div className="cards__button-wrapper">
+                <span className="cards__price">{price}</span>
+                <Button
+                  className="cards__button"
+                  mode="green"
+                  label="Buy"
+                />
+              </div>
             </li>
           ))}
         </ul>

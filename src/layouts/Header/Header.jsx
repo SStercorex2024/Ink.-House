@@ -10,8 +10,8 @@ const Header = () => {
       href: '#reproductions',
     },
     {
-      label: 'New items',
-      href: '#new-items',
+      label: 'New Releases',
+      href: '#new-releases',
     },
     {
       label: 'About us',

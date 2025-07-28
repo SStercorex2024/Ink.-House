@@ -10,6 +10,7 @@ const AboutUs = () => {
   return (
     <section
       className="about-us"
+      id="about-us"
       aria-labelledby='about-us-title'
     >
       <div className="container">

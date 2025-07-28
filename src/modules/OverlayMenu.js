@@ -7,7 +7,7 @@ class OverlayMenu {
 
   stateClasses = {
     isActive: 'is-active',
-    isLock: 'is-lock'
+    // isLock: 'is-lock'
   }
 
   constructor() {
@@ -20,20 +20,28 @@ class OverlayMenu {
   onBurgerClickButton = () => {
     this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
     this.dialogElement.open = !this.dialogElement.open
-    document.documentElement.classList.toggle(this.stateClasses.isLock)
+    // document.documentElement.classList.toggle(this.stateClasses.isLock)
   }
 
   onChangeWindow = () => {
     if (window.innerWidth >= 690) {
       this.burgerButtonElement.classList.remove(this.stateClasses.isActive)
       this.dialogElement.open = false
-      document.documentElement.classList.remove(this.stateClasses.isLock)
+      // document.documentElement.classList.remove(this.stateClasses.isLock)
+    }
+  }
+
+  onScroll = () => {
+    if (this.dialogElement.open) {
+      this.dialogElement.open = false
+      this.burgerButtonElement.classList.remove(this.stateClasses.isActive)
     }
   }
 
   bindElement = () => {
     this.burgerButtonElement.addEventListener('click', this.onBurgerClickButton)
     window.addEventListener('resize', this.onChangeWindow)
+    window.addEventListener('scroll', this.onScroll)
   }
 }
 

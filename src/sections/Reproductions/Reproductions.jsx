@@ -6,8 +6,12 @@ import TabsCards from "@/components/TabsCards";
 const Reproductions = () => {
 
   return (
-    <section aria-labelledby="reprodactions-title" className="reproductions">
-      <h1 id="reprodactions-title" className="visually-hidden">Reproduction arts
+    <section
+      id="reproductions"
+      aria-labelledby="reproductions-title"
+      className="reproductions"
+    >
+      <h1 id="reproductions-title" className="visually-hidden">Reproduction arts
         france, germany, england
       </h1>
       <div className="container">
