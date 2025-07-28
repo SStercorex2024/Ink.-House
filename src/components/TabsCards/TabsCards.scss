@@ -7,6 +7,10 @@
     gap: 30px;
     justify-items: center;
 
+    opacity: 0;
+    transform: translateY(25%);
+    transition: all var(--transition-duration-longer);
+
     @include desktop {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -17,6 +21,9 @@
 
     &.is-active {
       display: grid;
+
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
