@@ -1,6 +1,6 @@
 .banner {
   margin-block: var(--section-padding-y);
-  background-image: url("../../assets/images/banner/1.png");
+  background-image: url("../../assets/images/banner/banner-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -20,21 +20,6 @@
     }
   }
 
-  &__layout {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(13, 43, 67, 0.8);
-      mix-blend-mode: multiply;
-      filter: blur(157.5px);
-      z-index: 0;
-      width: 65%;
-    }
-  }
-
   &__header {
     display: flex;
     align-items: center;
@@ -43,8 +28,6 @@
 
   &__title {
     color: var(--color-green-06);
-
-    @include fluid-text(40, 24);
   }
 
   &__star {

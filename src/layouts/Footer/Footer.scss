@@ -1,0 +1,148 @@
+.footer {
+
+  background-color: var(--color-green-05);
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-block: 23px;
+
+    @include laptop {
+      flex-wrap: wrap;
+      row-gap: fluid(30, 20);
+    }
+
+    @include tablet-m {
+      flex-direction: column;
+    }
+  }
+
+  &__workshop-logo {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(35, 20);
+
+    @include laptop {
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 10px;
+      width: 100%;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__workshop {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__workshop-link {
+    @include fluid-text(20, 16);
+  }
+
+  &__workshop-name {
+    color: var(--color-gray-01);
+  }
+
+  &__navigation-list {
+    display: flex;
+    column-gap: 60px;
+
+    @include tablet-m {
+      gap: 20px fluid(100, 40);
+      flex-wrap: wrap;
+      margin-top: 83px;
+    }
+
+    @include mobile {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__navigation-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+
+    @include mobile {
+      &:first-child {
+        position: absolute;
+        top: 80px;
+        right: 0;
+      }
+    }
+  }
+
+  &__navigation-label {
+    @include fluid-text(20, 16);
+  }
+
+  &__sublist {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+
+  &__sublist-link {
+    color: var(--color-gray-01);
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-self: baseline;
+
+    @include tablet-l {
+      width: 100%;
+      padding-top: 16px;
+      border-top: var(--border-gray-m);
+    }
+  }
+
+  &__socials-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+  }
+
+  &__socials-item {
+    display: flex;
+  }
+
+  &__socials-extra {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+
+    @include tablet-l {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__socials-politic {
+    @include hover {
+      color: var(--color-yellow-01);
+    }
+  }
+
+  &__socials-company-name,
+  &__socials-politic {
+    color: var(--color-gray-01);
+
+    font-size: 12px;
+  }
+
+  &__socials-button {
+    @include square(24);
+  }
+}

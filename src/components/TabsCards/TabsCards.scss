@@ -7,6 +7,10 @@
     gap: 30px;
     justify-items: center;
 
+    opacity: 0;
+    transform: translateY(25%);
+    transition: all var(--transition-duration-longer);
+
     @include desktop {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -17,6 +21,9 @@
 
     &.is-active {
       display: grid;
+
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
@@ -70,11 +77,16 @@
 
   &__price {
     color: var(--color-green-02);
+    margin-top: auto;
 
     @include fluid-text(24, 20)
   }
 
-  &__button {
+  &__button-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(20, 10);
     width: 100%;
+    margin-top: auto;
   }
 }

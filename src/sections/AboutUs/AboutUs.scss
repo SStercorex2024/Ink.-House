@@ -1,0 +1,62 @@
+.about-us {
+
+  padding-block: var(--section-padding-y) calc((var(--section-padding-y) * 2));
+
+  &__wrapper {
+    display: flex;
+    column-gap: 30px;
+    align-content: center;
+    justify-content: center;
+
+    @include laptop {
+      flex-direction: column;
+      row-gap: fluid-to-tablet(40, 30);
+      align-content: baseline;
+    }
+  }
+
+  &__image {
+    width: 445px;
+
+    @include tablet-l {
+      width: fluid(510, 290);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+
+    @include laptop-above {
+      margin-top: auto;
+      margin-bottom: 44px;
+    }
+
+    @include tablet-l {
+      row-gap: fluid-to-tablet(30, 20);
+    }
+  }
+
+  &__title {
+    line-height: 110%;
+  }
+
+  &__people {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: baseline;
+    justify-content: center;
+    column-gap: 30px;
+
+    @include mobile {
+      column-gap: 25px;
+    }
+  }
+
+  &__icon {
+    @include square(80px)
+  }
+}

@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 const Hero = () => {
   const description = 'High-quality prints on thick paper or linen canvas. Rare artworks at affordable prices.'
-  const urlImg = '/src/assets/images/hero/1.png'
+  const urlImg = '/src/assets/images/hero/hero.png'
   const label = 'Products'
 
   return (

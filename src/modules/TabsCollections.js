@@ -42,17 +42,28 @@ class Tabs {
   }
 
   onActive(indexButton) {
-    this.buttonElements.forEach(button => button.classList.remove(this.stateClasses.isActive))
+    this.buttonElements.forEach(button =>
+      button.classList.toggle(this.stateClasses.isActive, this.buttonElements.indexOf(button) === indexButton)
+    );
 
-    this.contentElements.forEach(list => list.classList.remove(this.stateClasses.isActive))
+    this.contentElements.forEach((content, index) => {
+      if (index === indexButton) {
+        content.style.display = 'grid';
+        void content.offsetWidth;
+        content.classList.add(this.stateClasses.isActive);
+      } else {
+        const handleTransitionEnd = (e) => {
+          if (e.propertyName !== 'opacity') return;
+          if (!content.classList.contains(this.stateClasses.isActive)) {
+            content.style.display = 'none';
+          }
+          content.removeEventListener('transitionend', handleTransitionEnd);
+        };
 
-    if (this.buttonElements[indexButton]) {
-      this.buttonElements[indexButton].classList.add(this.stateClasses.isActive)
-    }
-
-    if (this.contentElements[indexButton]) {
-      this.contentElements[indexButton].classList.add(this.stateClasses.isActive)
-    }
+        content.addEventListener('transitionend', handleTransitionEnd);
+        content.classList.remove(this.stateClasses.isActive);
+      }
+    });
   }
 }
 

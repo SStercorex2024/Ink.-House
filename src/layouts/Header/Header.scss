@@ -58,6 +58,8 @@
   }
 
   &__button {
+    @include square(24);
+
     @include tablet-l {
       order: 1;
     }
